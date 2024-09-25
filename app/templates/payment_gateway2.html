@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico" type="image/png/jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(253, 251, 251, 0.993);
+      color: #0c0101;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+
+  .content {
+      text-align: center;
+      margin-top: 100px;
+  }
+
+  .btn {
+      padding: 10px 20px;
+      background-color: #e50914;
+      color: white;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+      background-color: #f40612;
+  }
+
+  /* Modal Styling */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1; /* On top of the background content */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Background dim */
+      animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+  }
+
+  .modal-content {
+      background-color: #222;
+      margin: 10% auto; /* Center the modal */
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      transform: scale(0.7);
+      animation: scaleUp 0.5s ease-in-out forwards; /* Smooth scale-up animation */
+  }
+
+  label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #fff;
+  }
+
+  input, select {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      font-size: 16px;
+  }
+
+  input:focus, select:focus {
+      outline: none;
+      border: 1px solid #e50914;
+  }
+
+  /* Close button */
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+
+  .close:hover, .close:focus {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  /* Animation for fade-in background */
+  @keyframes fadeIn {
+      from {
+          background-color: rgba(0, 0, 0, 0);
+      }
+      to {
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+  }
+
+  /* Animation for scaling up the modal */
+  @keyframes scaleUp {
+      from {
+          transform: scale(0.7);
+          opacity: 0;
+      }
+      to {
+          transform: scale(1);
+          opacity: 1;
+      }
+  }
+  .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #e50914;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .payment-message {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+</style>
+</head>
+<body>
+    <div>
+        <a href="/"><img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="" width="178px" style="padding-top: 14px;margin-left:24px;"></a>
+        <a href="/userlogout/" style="font-size: x-large;color:black;font-weight:700;font-family:Arial, Helvetica, sans-serif;text-decoration: none;margin-left:74%;color:rgb(10, 0, 0);">Sign Out</a>
+    </div><hr style="opacity:0.3;">
+     <div style="margin-left:70px;">
+      <p style="margin-top:50px;">STEP <b>3</b> OF <b>3</b></p>
+      <h1 style="font-family:Arial, Helvetica, sans-serif;">Choose the plan that’s right for you</h1>
+      <div>
+      <div style="width:300px;height:520px;border:rgb(119, 118, 118,0.6) solid;border-radius:15px;display:inline-block;">
+        <div style="background-color: blue;width:280px;height:80px;border-radius: 10px;color:white;font-family:Arial, Helvetica, sans-serif;margin-left:10px;">
+            <h4 style="margin-left:10px;padding-top:10px;">Mobile</h4>
+            <h4 style="margin-left:10px;padding-bottom:10px;">480p</h4>,
+        </div><br>
+        <h5 style="opacity:0.7;margin-left:20px;">Monthly Price<br><br><b>₹149</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Video&Sound Quality<br><br><b>Fair</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Resolution<br><br><b>480p</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Supported Devices<br><br><b>Mobile,Phone & Tablets</b></h5>
+      </div>
+      <div style="width:300px;height:520px;border:rgb(119, 118, 118,0.6) solid;border-radius:15px;display:inline-block;margin-left:90px;">
+        <div style="background-color: blue;width:280px;height:80px;border-radius: 10px;color:white;font-family:Arial, Helvetica, sans-serif;margin-left:10px;">
+            <h4 style="margin-left:10px;padding-top:10px;">Basic</h4>
+            <h4 style="margin-left:10px;padding-bottom:10px;">720p</h4>,
+        </div><br>
+        <h5 style="opacity:0.7;margin-left:20px;">Monthly Price<br><br><b>₹199</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Video&Sound Quality<br><br><b>Good</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Resolution<br><br><b>720p (HD)</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Supported Devices<br><br><b>TV,computer,Mobile Phone & Tablets</b></h5>
+      </div>
+      <div style="width:300px;height:520px;border:rgb(119, 118, 118,0.6) solid;border-radius:15px;display:inline-block;margin-left:90px;">
+        <div style="background-color: blue;width:280px;height:80px;border-radius: 10px;color:white;font-family:Arial, Helvetica, sans-serif;margin-left:10px;">
+            <h4 style="margin-left:10px;padding-top:10px;">Standard</h4>
+            <h4 style="margin-left:10px;padding-bottom:10px;">1080p</h4>,
+        </div><br>
+        <h5 style="opacity:0.7;margin-left:20px;">Monthly Price<br><br><b>₹499</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Video&Sound Quality<br><br><b>Great</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Resolution<br><br><b>1080p (Full HD)</b></h5><hr style="margin-left:20px;width:250px;">
+        <h5 style="opacity:0.7;margin-left:20px;">Supported Devices<br><br><b>TV,computer,Mobile Phone & Tablets</b></h5>
+      </div>
+    </div>
+    <p>HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our Terms of Use for more details.
+        Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard, and 1 with Basic and Mobile.</p>
+        <div class="content">
+          <button id="payButton" class="btn">Pay Now</button>
+      </div>
+  
+      <!-- Subscription Modal -->
+         <div id="subscriptionModal" class="modal">
+           <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2 style="color:white;">Subscribe to Netflix</h2>
+              <p style="color:white;">Enter your details below:</p>
+              <form method="post" id="subscription-form" action="{% url 'subscribe' %}">
+                  {% csrf_token %}
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  
+                  <label for="plan">Select Plan</label>
+                  <select id="plan" name="plan">
+                      <option value="basic">Mobile Plan - ₹149/month</option>
+                      <option value="standard">Basic Plan - ₹199/month</option>
+                      <option value="premium">Standard Plan - ₹499/month</option>
+                  </select>
+  
+                  <button type="button" class="btn" onclick="startPaymentProcessing()">Subscribe Now</button>
+
+              </form>
+            </div>
+          </div>
+          <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <div class="loader"></div>
+                <div class="payment-message">Processing your payment...</div>
+            </div>
+        </div>
+  
+      <!-- JavaScript for Modal -->
+      <script>
+          function startPaymentProcessing() {
+            // Show the payment processing modal
+            document.getElementById('payment-modal').style.display = 'block';
+
+            // Simulate payment processing for 3 seconds
+            setTimeout(function() {
+                // Submit the form after 3 seconds
+                let form = document.getElementById('subscription-form');
+                
+                // Ensure form action and method are set
+                if (form && form.action && form.method) {
+                    form.submit();
+                } else {
+                    console.error('Form or form action/method is not properly defined.');
+                }
+            }, 3000);
+        }
+          // Get the modal
+          var modal = document.getElementById("subscriptionModal");
+  
+          // Get the button that opens the modal (assuming it's your Pay button)
+          var payButton = document.getElementById("payButton");
+  
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+  
+          // When the user clicks the Pay button, open the modal
+          payButton.onclick = function() {
+              modal.style.display = "block";
+          }
+  
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+              modal.style.display = "none";
+          }
+  
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+      </script>
+
+           <div>
+             <footer style="background-color: rgba(253, 251, 251, 0.993); width:100%;height:150px;position: bottom; color:white;padding-top:30px;padding-bottom:10%;">
+              <h4 style="display:inline-block;margin-left:30px;color:grey;">Questions? Call <span style="text-decoration:underline;">000-800-919-1694</span></h4><br>
+              <div style="display: inline-block; margin-left:30px;">
+                <a href="#" style="color:grey;">FAQ</a><br>
+                <a href="#" style="color:grey;">Cookie Pregerences</a><br>
+              </div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <div style="display: inline-block; margin-left:30px;">
+                <a href="#" style="color:grey;">Help Centre</a><br>
+                <a href="#" style="color:grey;">Corporate Informaion</a><br>
+              </div>
+              <div style="display: inline-block; margin-left:30px;">
+                <a href="#" style="color:grey;">Terms of Use</a>
+              </div>
+              <div style="display: inline-block; margin-left:30px;">
+                <a href="#" style="color:grey;">Privacy</a>
+              </div><br><br><br>
+              <h6 style="display:inline-block;color:grey;margin-left:30px;">Netflix India</h6>
+             </footer>
+            </div>
+     </div>
+</body>
+</html>

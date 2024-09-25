@@ -1,0 +1,650 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Home - Netflix{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico" type="image/png/jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body{
+            background-image: url("https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVAF-pxO6fLTmv2IEbkRYuf2V_kNL8SANA9Q_MBtntkK1m2CnVDuXnf7p3lkPhpzsRi6seEo5ghxsIFtRq7KLccYF3WeethN1GjO.webp?r=f53");
+        }
+        #myInput::placeholder{
+            color:white;
+        }
+        #footer:hover{
+          text-decoration: underline;
+        }
+        .content {
+            color: white; /* Text color */
+            text-align: left; /* Center text */
+            padding-top: 20px; /* Space from the navbar */
+            padding-left:80px;
+        }
+    </style>
+  </head>
+  <body>
+    {% block body %}
+<div style="background-color: rgba(0,0,0,0.2);">
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0, 0.980); ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/mainpage" style="margin-left:30px;"><img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="" width="120px" style="margin-left: 20px; padding-top: 10px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/mainpage" style="color:white;">Home</a>
+              <a class="nav-link" href="/tvshows" style="color:white;">TV Shows</a>
+              <a class="nav-link" href="/movies" style="color:white;">Movies</a>
+              <a class="nav-link" href="#" style="color:white;">New & Popular</a>
+              <a class="nav-link" href="/wishlist" style="color:white;">Wishlist</a>
+              <a class="nav-link" href="#" style="color:white;">Browse by Language</a>
+              <a href="/userlogout/" style="font-size:larger;color:white;font-weight:300;font-family:Arial, Helvetica, sans-serif;text-decoration: none;margin-left:450px;">SignOut of<br>&nbsp;&nbsp; Netflix</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    {% for m in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="width:30%;margin-left: 460px;margin-top:20px;">
+        <strong>{{m}}</strong> You should check some fields that relate to the movie's theme!!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+        <div class="content">
+        <h1>Movies</h1>
+        </div>
+        
+    <div class="image">
+        <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABU-FJRBTq8rZ8qk2Gb3ZCpfrU0GMKKmtkqhs0IErezdRsxY_67iAGHgUM5b5SPXA1pEYh0lrsFaTa6gxpdwqbkQfp2dh-Q7rAq7Bg5t3YN4TO9wwClPTJhqhNQfZkwVf30_40rfH6JP611Mp52MJbRJY-o4Oyv5fgUHNT4KHAU5R7Qp8rAfuFw.webp?r=4ab" alt="" width="550px" style="padding-left:60px;margin-top:70px;"><br><br>
+        <h6 style="color: white;padding-left:60px;text-shadow: 1px 1px #0e0d0d;">In this mysterious drama, a vampire with a broken <br> tooth falls in love with a dentist as forces threaten to keep them apart.</h6><br><br><br><br>
+    </div>
+      <div class="movie-card" style="padding-left:70px;color:white;background-color: rgba(0,0,0,0.980); height: 2500px;padding-top:20px;">
+        <div style="color:white;background-color: rgba(0, 0, 0, 0.980); padding-top:20px;height:60px;">
+          <h5>Indian Drama Movies</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABf85HKc-zHfJ6BDCANHuh-NNQgkX5Eg33p_Nyg--U4bYqQUnTkxP688YO-uTeIzCUFPBIYYH59V8lEwkDcomAUYRbWqgrcogWhg-Ma9SmZXGliP3Fx10fa-sqr9slqR3iLZY.jpg?r=3e1" alt="Movie 1" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABczQPXkzZeGEwNBbeauc8gTD675mHiOv7hDRuDHlCstZmtw-1qgD4SDHA2_bdSy_abl4RMb3OvsnkumEs0Plm-eedXi1Q8rf2vts-JeM4jux5we6ptr3QP481eExYSWlJG2f.jpg?r=293" alt="Movie 2" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXVhg5xNVsKIE8mqlro6FyftmcfwE0n_6AYHQAjS1rW2icCy-mm4yISO0ZXX-bjTKiP7mAKGAwhi-Otc8Q2oepIdbHmqk73QtPjbI0Xn8csmiIwQCxLcwqL3Z1yhDeGrfXfd.jpg?r=e35" alt="Movie 3" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeHvhGi6t9RNzqBPSgnliw3-B5AkMQT1yL1MI7sNGgpMRGq2XCK08bL70aLUZyqLbxj8WfSJBNVNq7qeLnYQ4LcRkh1kM2M-Mf66QP7S7-b6Rm0R3sv5KahWE7EvYgBPA-h_qVvOO1z0BIlKo0vXIv_3wGGo93QOr1ugssPzzzz5RNL6AE_-0QwywAtBdSs.jpg?r=cd1" alt="Movie 4" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfU2VqIH2G3RAnPhsr6cKf6clsgHBkfD5paFN3Er_Z8-R9IjONJA9BUFFWj-d-rGAfu-KXjnzb45-IhpUKRDYK7RAsYXWGZwybRckZYfkKakFTD0RvO6p8ajP1_Ai_27t5Ag.jpg?r=7c0" alt="Movie 5" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABc5qP3WNTiSY7UJH0VxFMLwsESPBcC3czhGzQfA6AZyGmRHvhiej8I5nHJG1PHWKFfPS6JoMRqjF9eQvjKPHkjVuGQISmENOb3P9GDo1mQmkXxAd7n--uNPfJ8l22KFsMMGT.jpg?r=c98" alt="Movie 6" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABb6Sr5GonwLq4pFWRyZG16-Mt72nCsVXhQKj5Nm71ZF9_DG8DYyHU2Tqr_F7oydwsIodsofC8HpqLZtnASXexPiHXy9EHA9RIOyiRorRs2UJ8iPiiDM0KTNR95Y2itLmTz4Q.jpg?r=2d5" alt="Movie 7" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZJ1jqhAicYkr_zwsvALKbev6K8RhFsrEf2zjT78pN0gO6PIJmqW-MzuiRHcvlIK0QC7Qvhd1PAeXJE8m3Gdbome96GsFxJXYjvE7x-liURgQUJhX6We9945iSz6CF6sjsCMvtesfE2s9hZ9iRAXo_Z3m4yqp_GHKgPcuNCwHLVB-tS0qmZ6nJGMx54JtFg.jpg?r=03a" alt="Movie 8" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaJhbUQjS8mk9pa79jI-qjHrCibDw39Wfb2vd4E3gDAfRRy2fnPoNrqTV_6Fd6BEpM1ke1KD1DI0bYjAcRCo5mf8org11n6VkhbkahQqrbNj5sqGnh2J43f61TLqnvtYQkc4.jpg?r=c68" alt="Movie 9" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABX4JYcPX5C8-CW-1d9V0HDuIYuo1vPIjOUnzbFH8w6BC-uiiqgnlX0APWlA96pyDDyIfjBV5-EP52WQvdLKgpv8qHKKKoCy9qo0VecOu2TR0CSXSJoWRtU-2qyovDZyx5s4A.jpg?r=7f3" alt="Movie 10" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+          <h5>Female Friendships</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd04yQr5KztF-cqQof0ncTfZMf9pT8fd3yb--XDa8_4JdvNuAQARcFLsozAqZO4djbB5XMu2z-3IDEfEyjN6XhKYiRxTjCXLhUC_r-cXqvMN9y2rnCI6eEIAXsQtIN-ZQsWA7Oz8VStTN-znnuwsKaMBYoEss4VqTUg.webp?r=033" alt="Movie 11" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcQtEgyxvxztufwwp9jJKUG7N9GzIeolPWa71CdkuDpuYf0hJUjMmyUzyEoVWjLSLYL0MytLIGyXr3wdJXvUfL3YvOktGWNkXBc.webp?r=330" alt="Movie 12" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZvNPAaMDqSWqN-9YSf4SlrgTlGn8Jk78jUbbBKcBhoQuM7vvWct4rh58wrzO5DwWCtVCU6B_CFKnJSgqFTzPkoOQHmjK_tq_uA.webp?r=7dd" alt="Movie 13" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcr4mtYX05wPxPdysjex2zTnXqDp0l9Ev6zA5lhOGoVgdfoxsrQH4n3_Td5AGMr05yuF4YOG5q4bwoOv9-FIiFI_BSA9AB5QH30.webp?r=975" alt="Movie 14" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcySFXcPbXcti3fVxnxZTyUhMgr9hpllJHpnFY4GpvdAVJDvH6wgAFNvw0G94e3gbTaaCIxa_XxyvHee_sUgo3JxZbIih2EVMSM.webp?r=035" alt="Movie 15" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaUJ7-FMkQ3NgPluxJmpd6H7fP0co6UzmTcEdbUAdViuqsSAAB5wMdxXemNm8_vVc7uq5INE4ULXihffQRWcuQOe7uDr5rSyC-U.webp?r=374" alt="Movie 16" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXDxkoMvNfKLYedaz7Ll8-KWFeLe13JsnVoZDZ_B7K61UfibXFe-HjJ7u2MReTacffhv0H0gW8_DyDXz92ppUT78WgiIPbHLctl8LR0tt-rYRwXHsVGdrEBYr2oiig8Um4bF.jpg?r=7e3" alt="Movie 17" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbkicxXGsDJMaiF5LjwCHMG6ERqHCNWF7Q7Ig2bIxz8Eu0nHXOKEyplF6bdTXTmacFFhirXF1WRlGsH_hyIJWHCaRO_J_gnHIos.webp?r=a59" alt="Movie 18" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcEiA_50YAnz-mOydR-PaT6gp_2bHVrtu0jpjuVRsmicZzKw20CQkYNuTWFdysnFwvfme1IGoKucFfhFSB3sPW8uQbCFn6jawPVdKPLioAIAqPr5cZSc8lkDqupYudl3aiKa.jpg?r=52c" alt="Movie 19" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABW3NqLNV33pcC94_CTz3sfhxHTRtDANnHrk4HFjI_XmVbuVXTtkMkPixBpyvLe2HBjR81823fHP4VI1sFoZmN_LD4MmZgap6Y9oySZ85rmwkO24lqBWgeQEDPtfncfrt2FkB.jpg?r=6f8" alt="Movie 20" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+          <h5>Action Movies</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSDyinNcZyJstFVDbj0z8qxOh9w4zLLJ_t6-iYEUzgL3Zu8VOjTjWbKAEjrfb5RXkSRTTmhCZt-gglu8-tXkp7cT6BYp4IyTIYK7XVLAjQN-9tXCJELeAmUUP39ez5G7dtLr6EeguOYn2oePBpt9ydKpismQF5jzeWzTreBb0Meeuzfbyk4Gmu0PY7MzPf5aBddLVPwi3fUKR5R6urh-iSoMBxMcntg-qk1SRVY9JOnxXBH_Kjpfe6f3qn8YVaHR1f0Bm7DMejjXqAd0_xdn-M0GgIYq7Z21UiJwLcrK4e95noBV6laYBnA04oNkUeTSbXB2dLMIeWeLvf5rKYgt5v0.webp?r=246" alt="Movie 21" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABauS7gs4vClmSSqic7WPklJIHbtxzHZtST1DnGgW0pWz3wfmcE6IPyNQeMS5KknAJgVfH5AyWL7-WExOHJp-zuPvprjKx-ViYBztAb_zpsvsFe37ywrDzbfWgxyCrMMfxs7J.jpg?r=f53" alt="Movie 22" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfypVgSO95phoR6iRPSg3qwzdufMvZGwjyX7k9le6qupSXVU-Q86RyMN0k5ddukjuM5j5KceMLZwo752VTx_M2lvvKuer03Tans.webp?r=222" alt="Movie 23" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYnrGbEoSyCjOVD5mSJnlGMunsQuPkPqGrwCx4ipy4Fo5gRnuzzvjkUVjFmHAhwLc751LYMv-inJtsuRCmHw4OrflLB35hO9UzGse-QCJCtQuahz534ODG5dCJsLXCIntUfV.jpg?r=fa8" alt="Movie 24" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfee0xVZ0HqHMD-DECQEPipyByf_t37bVfvRb3bf-V-S4IvwuJRFCeW5FY0eTafu0ZYEkVKu_ovyucxAJG_j8HsSeWn-DvOwCtA.webp?r=2be" alt="Movie 25" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABc2A8wRiczWGnLPPt1aOU7thWGoh3Blw4whmv08Hy1Km_3eYMRDsnFOPcHiK7WEgt2m0EkuyZAopF-dZ9FnC2vToMfL7gjpoOh4.webp?r=881" alt="Movie 26" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeTNSuzeZdTGJ46MUpDxEgflxH66R_7Zw8G4gE3vBixYDL9Ksc4MGsSaPtvR1OhRPlHRoC9SRuROwSSJGbcYRskXd82KqFkmQZs.webp?r=cd8" alt="Movie 27" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXnRBNRhv3bSNmWvv2ehblv16-dsEwrgu-mFvG82GfCBDxjTixtirzscC28rCDRaG6I8mH9u4Ad_EMHWvEb4AfeKTa0DOHP0ZXA.webp?r=305" alt="Movie 28" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTbR5TEckHFV3ghTCsKiQE8NNO9Bri_6TV-QP7nI2Kxr_NiR043XwLc85fhMzW7CyZpEvfEr4vGFTveXvJfmgSS4eNd24s5-Ztu6-0OCztrkHHYehSK156YiC7M-5pg9fDiR.jpg?r=32c" alt="Movie 29" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfFXzx0eJNEYQ4S9UNvSoJyHrdW8GR2nKYJiZm9B9pcLMl6-npzbWhsmQI6ncN2BCYI2Ms4yLvOb84zi37Ohc_oQnR7jU5D9c1n5-oOHIv2CpE9IE23U4GsDSwXTkA0pdPKg.jpg?r=d31" alt="Movie 30" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+          
+          <h5>Heartfelt Movies</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQZ1Gg93kE9ZqoPh4ub_-HMUZ8oluAzSVV7IgnLtF0gvCEmczXwmiRtsj_Ql1hOxJXiptbghK9IROayixphMf4BZzBHU2AnHqm8.webp?r=84a" alt="Movie 41" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABakQa6uFgNLG4PjTc0ncNaq7AAChWEQffj5K7PfM9DtyKtmZoVHTF5VbwWnhkmej2tttQ-znSatw8tKVJBj_V0W6xXpc5R43F4s.webp?r=c62" alt="Movie 42" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdzbUU2KNuW4cGYdEOfRsRuTLq5ly1N8qZ5B2KZzsIjtREhMCJvIvNTmW3uDOiWh2ke7hlypCR9k6WSA7_68Bbv61j9_UGT_b9hCrMFFjbD0c7MnYlKbAYbvs2iSc31fLdC8.jpg?r=5f9" alt="Movie 43" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYTBkS4XmgqTz-v7E1FdgEqT2-BwFFkDTUQqP6C0WrMZsJR6j21TCa49_-6NEytDbjPbvhA1mOeZ_rege3OzxMbjE1qerWWJCsU.webp?r=dad" alt="Movie 44" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd-Bhnrdl-_-vMXg0euMtgUsiWNdYpPtuCWlK5CRSDlQchqoKvkuZXpdXyts6gAf9NjXw4AwTq6nppDT9BhGxh22s2Z3uDRDgGw.webp?r=0f6" alt="Movie 45" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSkiL3l5ZtMbnHRfBaLrgmJEDiGaFbUhpHkDWEcTIiZ9mnbcZG8A746luiCZjI9QWMmnjlykoxJ0Y1uKph-CVL0gtUAGsgStm9k.webp?r=8a0" alt="Movie 46" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcbvYdatRCKNGBVeukCA_ngo-_qqMX3mtwcNmp52bCnAhcIJp8Gc4OSJtheb9FqduQa0X2hPeWInbXyiRXwAxk4xZ2Fb8PWXY_c.webp?r=d86" alt="Movie 47" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSfabKq6L7kde3kUdTRVNapDeVmTWYG3SwS14Ac8i8AX8nKaYL-wNmIi8fAPmgNxwu4SLUnVcNSvLR8PfdidOpaaXfwxoGYv2cI.webp?r=de4" alt="Movie 48" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeXcSBWL2WnSMRufe0uD0fBo-9Png-0kl1tQYZGONyjmxvvFBAYajXB569Nlee1cP7wA5JVzZdy-oMR5_KrYYfKnRMbRbvsFpUA.webp?r=c23" alt="Movie 49" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABesDmQnGngOSILfRiplteLPqI6YPQpIh-fv0tdweCnu7htWOtC4v0PLEC_HTHRQ1YPHUZ81OfEBk2J6WX_Yt6W7qLf9hJccOVzw.webp?r=a9f" alt="Movie 50" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+          <h5>K-Dramas</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYvSB1nYl5pdnnR_op-3bE6WW3dP60ZSBQc0xYtZ9ab-uS8InIO7CxUoiow2X3zcuPFQE9rVqZaDV--l_qSKBULHv9NS9cXyr8eZAGJVpBTNBMR81HkJHObVqS52NSyyB8H6.jpg?r=1f6" alt="Movie 51" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABRSTr6k5rFiRhyKm7bb1Nyh3rzJZYy4xFiXps53kOIpydCNwCnebnmh7igwrK-Ux2WtjUpaFF4PRX5hxTB4bkiOJfYdaiMH1_erkRmJMccIc8d5EeKRn489ylWxR5CQfHo3K.jpg?r=07e" alt="Movie 52" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdgzd-qDTW-wijUOhdYDJVupaoznG9aqG5NV1aE7qtTlvwOUiHaAVy5JExMyeptWZd9ZQ1EW6sLaa4uMLMH6270bL2fIulDrHtj-ifuMoxskoNOkG1rdrafW03aF_OBp3AKu.jpg?r=3ec" alt="Movie 53" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQlTQA4dxOpQYHVlzoJS2JWzfaUWrgd6JseSvmwkotg5rTZy33H0E2SNGbfY8_KtgOFG7s7ATrcawbwrSUaQgtGeMgoHT88j62HgMA7CXUssf7Sy8rzoCADGSIjPk6mOLqFX.jpg?r=d36" alt="Movie 54" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABav9IoWhOIIcEA4fRHgKBleVtagKm4WWMInOpuyn5JEG5nOxIS75MdVtDAtxpxXVlBAKz4KtbuBEj1Ive5tbFPGuut8F1BazMIJlarwbg7L6CgacYuQuGoWd9PPnL0Nc7XIt.jpg?r=d64" alt="Movie 55" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABauQH2jkttOBD7XULeJ2CfgSy9nEYAg4ITpUiyROn2xilIsuNM9zPRCYWLH1PWTlT15GOnHejUEIC0iOnaI8phvr7R9Qst2f1ztVxUzfHV-jq0mGnuefNTtDn1U9HbPJJ66V.jpg?r=f61" alt="Movie 56" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVT59AReBhws780He2THvOsIw6GsIBY9peHwEaNnlkqHeVy_M2LTrEUs1ccWPNHHeNKerdzT_QfVWFvNKvAmlWXYJgmimTkpcsvUSDGktezLvsp8lYpcWczueku-nLRBEvis.jpg?r=ac9" alt="Movie 57" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaylJexEyp_q4t65tkr7eK4FLYpnnx5IGFZ-9j6qww4Yw5NptkTjaWJAksVHxqVr3pWQ9TEqvI1BFvb0K6Yt_xiMkdWKxOsvzAg.webp?r=f46" alt="Movie 58" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcHnQ1B-VC0ZXZwJAt-TItaM2ia0othBUCczGAVYPf5Cgxid657QR1mSMc0tOyFzBQAFCa_vVweYQHgZKIrCpbgv6-UCaORlD1CR05hjmnHFUxzrSJRwvMUdm_9n8gIWbdES.jpg?r=3dc" alt="Movie 59" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVWfptnIeSTxELunhiSwNwipjb6MlCAARjD_r7VfwLM6bWxCtX8lH4uYlL9qZFl9XM757QdnljQVvvFtaeri2o4LiOMuMAPx5ZXSOkLtFnjxxBX6bUXwlv-_LT_8nuJdQRct.jpg?r=c81" alt="Movie 60" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+          <h5>Binge Watching Shows</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXCUGegdOGXVxBHeloFYee7G9eqcbCE2hrRO0In0L-9FhWOWC9fdq1xgSAGgphKZTCZr7BUgETYx8gheacEN9Ka7FjbmAX-YqJS_vzpvj8bi3CJ6eyxg34I2O7k10yxMuqj9.jpg?r=a4d" alt="Movie 61" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQk8YLUlt3iiNgRiuGlIadYfRWyTfSi5cf2Ds4xcxC4smP38v47M0wXLKOAacmTqiEw_7-ModwFii5rs_ORhRabpnKE_FBPR7IMn9BDYwFmJsIdM-jqU_06fdbh_sCtuscLK.jpg?r=87d" alt="Movie 62" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe8CrUvOOlLjx91EL54hIhQ1FENZmVfzp6Cdapvu0Ik_jbCajTNKoiRcGfV5pjE6TdsTEM_-ABNlOANvAvrbuifulCTE4zj9aas.webp?r=2c1" alt="Movie 63" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQQFN6tkXIvX7mVgEpPYRf8Krt7CVpfRJflJxfAUxYgQVhkbNnEcgBWVnj2CY0BBr4i3_BDjVKnjfwk8gb2thzb9XuW31-0x7ns.webp?r=698" alt="Movie 64" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVRIz5uSixMhLewZH5pKEQgR28KdpAh1KosqMFz8zgbgXDkeD_722TMu8Yzr7TGcBQa18r77KQfygeHhVoiDEsYg5yPi_0zUnps.webp?r=c28" alt="Movie 65" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSS2W84dQCgaDE1YFti8cz1ca6r0Wbr_n3YU2ywnVNs962C1aPmmCW3AEahv3MIWuN0ZmKTHze4XISnVxw8qDKrkcP5-Kad19yTdnjNKUTUoL2InaZt58jDJqxb-98nwO2-c.jpg?r=1cc" alt="Movie 66" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcVSOMIbaV26uWPEHs_T3iC1Zxo7Bw0CygGlHEqPam7NF92EXwAmrGh4G1-leiZc5RBwQMIwM_cce2aBDoJpwux7GUaXYEQye2s.webp?r=58d" alt="Movie 67" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeyr_kB3GIILjIzDRX7pUJKhkrYL3pxpZplqBnXaRooEOwVBpb5r8G0gkqm_YIoG03JUJzbU62rdVG6ZGlnqbDwC1MgTqIH_TGg.webp?r=329" alt="Movie 68" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSUZktDKdq1MpgfpqW4mrExX54eJ0XRbLYa-1j-ttZFlBDrCP9HeL4I5Up8HsMgbnAghEID6M4h1XnlOepj8czFfSss7NESblXaQRmY4vAFt5jdyMpea4e901ryoAjJ12yZa.jpg?r=b70" alt="Movie 69" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXtlMKUWpPxKf7rsquXQFjWGnO3qPqHgnekh3Ac9jirR5bf84itAyKnfU_CNiR9BPNGzs_vJ8-Mll1VrvJ-zbUrgY3Qaw0LfN_w.webp?r=c88" alt="Movie 70" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+          <h5>Acclaimed Writers</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWDeNjw0FgpRJlTcHOGWNjKvW0ANdYdsUahk-__62zyexzvT0WGhK1S31svxa-x0_gjusL3uIBW7V0qmgn-W3UF05EXVn0WFO8ZObdE-EPZYglpYErnD1ePvVGRvHL8EwAnf.jpg?r=70a" alt="Movie 81" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd2_HT5ra710t31-K0UUA6GbN5Lc_L16wqdXVPEWgMar5KA1q0l251SXnBYvVSjgAks68Mq02FT3RHcKVJEp8RzuEhlsO3x2s8kVqQ9uW9Dx6bYOKyLJHFM2xNZfhs_Oc47x.jpg?r=30b" alt="Movie 82" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABebSNFiknMxLQ4GYqkBqkZS4JwiP0ae5qPGcAG2cYvg6wm4Jp5YuVOx7YPj4RxYCMSJpc1b5f0PmH8DLsiskKv5LxTuzlGeS1qh1jBU-90dS_Lk-GAUNLi0vOceGFK_YQ5rJ.jpg?r=dfa" alt="Movie 83" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd1OfJJxVFR2V_cXoquSzu5BKMJiXXvS6VkzSiDKGxLTsL3BLJ4K8J33gl7cLpzigKZh5ZOUMznbp-ssiMphLFJulV7d82e6R_-geWI2N1yWC4QeF66-sHoIq83GDK7zNIDGKDQY3Iu-NsOA1ErKdgZO5UqJHi0UsQgygOfUNPJyb3jOJIsG0rUFtl3-3jaZF-wrAxeVU46MBk5buG72TVIy4y3Jw7JrIgPL_jL9OiHhYO21zYSc-YHPbcpf430HorTz8wVw7wjY2twWTiT7bt8lmw.webp?r=ba3" alt="Movie 84" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcyxyQgz7wNre6Wxvw_KRkQBXjR04wKOqGBi_8OopvNWASuXhtV8XL4lfBR6_VYI7dWQIsq_EwNZ46ZURDhhItZMiDj6aAFrosUaLX6sY0AZ7fLSriitpVfmAP_dCb3epFln.jpg?r=640" alt="Movie 85" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABY7qWCKcs2nD8Yzrmu6N26WjBcHniASEoubXZ0JYhZKxnGVYrk5X1jlENW2iiMi684ErW_26ts356LFJdV1kMyed0TXlajD4DVscRnFFW2efe0Hif1cUD27SHc87vM6Tk93u.jpg?r=b95" alt="Movie 86" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVuXEtqY-EgeCSxy1Td6we6itfhktY5gPGPimOwnFd7aNyjY4oj6OQ13OY2uNYH6bFfVUYASf741ab6oIIOCZbaOWK7PQ06YbP0.webp?r=477" alt="Movie 87" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTaI3jdBMgKF-XE99jolU5CDQziZBKYQ4u1aB6-8huJMMqKdz5JXNHL0AX7sIqLDOSO2v4mcukwEXZ6Xj7Hi1HZf1B62GQ7X8Y4G00b9fevhEL15-FwvYvHdqzDCLdbg1tR9.jpg?r=bec" alt="Movie 88" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABT2XzzBGaYs5GB4RVpGdGxGb68kp1x0_bEtwnN_SBdOUhkoM-rf9Kvg8DoMdwmj79Y3ZK8rNE9O5r0eRf2ZzfIirDvy6junvLdQ.webp?r=b8c" alt="Movie 89" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcls-RFyalYG8Yn2EIINLr9zImUdvaNH0s2joQeRD3xF5JlgTHLjceagDEfyo4MYbnlHmJF6y19WaSl0UeouVFIWRlAQWnCokMY.webp?r=5b4" alt="Movie 90" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+          <h5>Psychological Thrillers</h5><br>
+          <div style="display: flex; overflow-x: auto; gap: 5px; padding-bottom: 20px; scroll-behavior: smooth; width: 100%; -ms-overflow-style: none; scrollbar-width: none;">
+              
+              <!-- Hide scrollbar for Chrome, Safari, Opera -->
+              <style>
+                  /* Hide scrollbar for WebKit browsers */
+                  div::-webkit-scrollbar {
+                      display: none;
+                  }
+                  
+              </style>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                      <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdU5C2YhwgETviiH6FwPR3pQMtKCFpbzcZRJng_74fxBpDScFirJ4ZT4UGCPqT2fXT-msOKGXBV7qZZzvijy5mz5-orgjsClKWs.webp?r=839" alt="Movie 91" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABem_h6ph2WryyrDFkcjbP-2K3bEroJPh7Op-YGAVd88Udgz19K7XJxnmuLJUrsZQUC8ibobNebiYQ_oWvK0z_5Tj45spg4Gl1Os.webp?r=02c" alt="Movie 92" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcElkyM94KkV-6JkAEl5bG0HCdJ9f7eEfQVrbLLZybJIsToWaPi_BCtUciYVN9g2OvedFq2i7OVbTQwtkq75HqWfzLttEcTqhWs.webp?r=d5d" alt="Movie 93" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbHhpJCN56lqkLT6BJyJwW_9qvo_u1N2s5-OxFpiwCiAMnFaRmLTY6hRnvRbc2BD8mpFDGk6_sbg65lcv2S_lMocEOhpDCZ54kFilnuc4QGnPzecL9Rtz0Wwd8Gq8lb7ruXe.jpg?r=38d" alt="Movie 94" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <!-- New additional images -->
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbW7gvYNNqFGyLL2kEsADMitiwhY9LQZdK3xBM7FMup8dCSgg8H5glm2rcLv6q-hIR5IsRKcyadtRUzRCzjezyhqgyjffEzOvjm1WPUTSJL_EyH3E7sl-y1tQAIKfYvQOUHM.jpg?r=e8c" alt="Movie 95" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+      
+              <div style="min-width: 250px; flex-shrink: 0;">
+                  <a href="#">
+                    <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSsA3pWY3WgwyIxMntCy79d9aHiDmUs-gyAgqDs0WWvF-QjEki7YszTSWJvMeou5v4pUGwYTwpVc6Oi8B3Wmn2sAoDnLofmW_RQHZYAZePkLdy-UEQXMi-R1MsYmcyUtFbgO.jpg?r=cf4" alt="Movie 96" width="250px" height="150px" style="border-radius: 5px;">
+                  </a>
+              </div>
+              <div style="min-width: 250px; flex-shrink: 0;">
+                <a href="#">
+                  <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSVCLdjzwGr_Q3k7xLxNzr20dJCOT3M8LzBWufUBUUQiSm4WDHJcW_esMnMoDF3HCzEtk-Z4IsbLbiJRIxjkIo9g0JZA3lm2JiTj0XgwzuPgM6Q3bYksqiThYKGVD1TUjHzP.jpg?r=1a1" alt="Movie 97" width="250px" height="150px" style="border-radius: 5px;">
+                </a>
+            </div>
+            <div style="min-width: 250px; flex-shrink: 0;">
+              <a href="#">
+                <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeIVfJGhpzINmVJ7mk4Yt4lJ6B7llvYrgjaAIZeJ91q2Gf96KdvEkzwwsOkTXI1VubI7c1PPedJehDboVJyxbXTnnBNS2NohyI3Pl2o44PhEt32Bnwe4xAVnsnFRCoGDHObQ.jpg?r=a7f" alt="Movie 98" width="250px" height="150px" style="border-radius: 5px;">
+              </a>
+          </div>
+          <div style="min-width: 250px; flex-shrink: 0;">
+            <a href="#">
+              <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABU7Z9s4e_81WVr-8aHpm8gEPD8A8OYg5f-gaC2CgXHDJs1XfxMlxMUBfu2g3FNSuP_CG_NyStj6q1pho31wt8dfm9bvasDN5H1Y.webp?r=dbd" alt="Movie 99" width="250px" height="150px" style="border-radius: 5px;">
+            </a>
+        </div>
+        <div style="min-width: 250px; flex-shrink: 0;">
+          <a href="#">
+            <img src="https://occ-0-2873-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTj4A8Rvb3Hi1kYNF9BHFPN8BTW0de7qtutJuFAsD_sItPKk2EgUUrubIoRVz2QS34lKSzCqu0vqCjovtqBqdn501HWyffW0iEqHxYMSfgiTBaTQHNZmIOmk_CL-A0NMIy8W.jpg?r=0fe" alt="Movie 100" width="250px" height="150px" style="border-radius: 5px;">
+          </a>
+      </div>
+          </div><br>
+        
+        <footer style="margin-left:10%;margin-top:7%;user-select: none;">
+          <a href="https://www.facebook.com/NetflixIN/?brand_redir=138825536219512" target="blank" style="color:white;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="FacebookStandard" aria-hidden="true" class="svg-icon svg-icon-facebook-logo"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.987 13.1621V21.9841H10.042V13.1621H6.84198V9.51207H10.047V6.73207C10.047 3.56707 11.932 1.82007 14.815 1.82007C15.7618 1.83321 16.7063 1.91577 17.641 2.06707V5.17307H16.045C15.4954 5.10007 14.9424 5.28088 14.5421 5.66447C14.1417 6.04807 13.9375 6.59284 13.987 7.14507V9.51207H17.487L16.928 13.1621H13.987Z" fill="currentColor"></path></svg></a>
+          <a href="https://www.instagram.com/netflix/" target="blank" style="color:white;margin-left:20px;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="InstagramStandard" aria-hidden="true" class="svg-icon svg-icon-instagram-logo"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.93 16.123C21.9584 17.6765 21.3789 19.1796 20.315 20.312C19.1851 21.3804 17.6797 21.9607 16.125 21.927C14.474 22.021 9.52499 22.021 7.87499 21.927C6.32126 21.9551 4.81792 21.3757 3.68499 20.312C2.61754 19.1819 2.03744 17.6772 2.06999 16.123C1.97699 14.472 1.97699 9.523 2.06999 7.873C2.03955 6.31886 2.61933 4.81466 3.68499 3.683C4.81767 2.61952 6.32162 2.04163 7.87499 2.073C9.52599 1.979 14.475 1.979 16.125 2.073C17.6789 2.04394 19.1826 2.62353 20.315 3.688C21.3825 4.81813 21.9625 6.32278 21.93 7.877C22.023 9.528 22.023 14.472 21.93 16.123ZM20.2 12C20.2 10.545 20.32 7.422 19.8 6.106C19.4572 5.23679 18.7692 4.54875 17.9 4.206C16.588 3.689 13.461 3.806 12.006 3.806C10.551 3.806 7.42799 3.685 6.11199 4.206C5.24298 4.54905 4.55505 5.23699 4.21199 6.106C3.69499 7.418 3.81199 10.545 3.81199 12C3.81199 13.455 3.69099 16.578 4.21199 17.894C4.55535 18.7628 5.24318 19.4506 6.11199 19.794C7.42399 20.311 10.552 20.194 12.006 20.194C13.46 20.194 16.584 20.315 17.9 19.794C18.769 19.451 19.4569 18.763 19.8 17.894C20.319 16.582 20.2 13.455 20.2 12ZM17.13 12C17.13 14.8312 14.8352 17.1264 12.004 17.127C9.17282 17.1276 6.8771 14.8332 6.87599 12.002C6.87489 9.17083 9.16882 6.87466 12 6.87299C13.3608 6.87034 14.6666 7.40959 15.629 8.37161C16.5914 9.33363 17.1311 10.6392 17.129 12H17.13ZM15.336 12C15.336 10.1596 13.8444 8.66756 12.004 8.667C10.1636 8.66645 8.6711 10.1576 8.66999 11.998C8.66889 13.8384 10.1596 15.3313 12 15.333C13.8406 15.3319 15.3328 13.8406 15.335 12H15.336ZM17.336 7.85901C16.6733 7.85901 16.136 7.32174 16.136 6.659C16.136 5.99626 16.6733 5.459 17.336 5.459C17.9987 5.459 18.536 5.99626 18.536 6.659C18.5379 6.97731 18.4124 7.28317 18.1876 7.50853C17.9628 7.73389 17.6573 7.86008 17.339 7.85901H17.336Z" fill="currentColor"></path></svg></a>
+          <a href="https://twitter.com/netflixindia" target="blank" style="color:white;margin-left:20px;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="TwitterStandard" aria-hidden="true" class="svg-icon svg-icon-twitter-logo"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.768 8.207C20.7914 11.5932 19.4565 14.8475 17.062 17.242C14.6675 19.6365 11.4132 20.9714 8.027 20.948C5.58923 20.9544 3.20152 20.2564 1.151 18.938C1.50998 18.9771 1.87091 18.9955 2.232 18.993C4.24768 18.9984 6.20639 18.3245 7.792 17.08C5.87438 17.0472 4.18971 15.799 3.6 13.974C3.87982 14.0187 4.16264 14.0421 4.446 14.044C4.84354 14.0428 5.23935 13.9914 5.624 13.891C3.53637 13.4667 2.0367 11.6303 2.038 9.5V9.441C2.65835 9.78765 3.3519 9.98262 4.062 10.01C2.08979 8.69332 1.48225 6.06954 2.675 4.02C4.94972 6.82016 8.30596 8.52336 11.909 8.706C11.8375 8.369 11.8009 8.02551 11.8 7.681C11.8014 5.84295 12.9248 4.19204 14.6341 3.51625C16.3434 2.84047 18.2921 3.2768 19.55 4.617C20.5522 4.42342 21.5131 4.05731 22.39 3.535C22.0556 4.56894 21.3555 5.44538 20.421 6C21.3102 5.89965 22.1795 5.66709 23 5.31C22.3866 6.20228 21.6273 6.98489 20.754 7.625C20.768 7.82 20.768 8.014 20.768 8.207Z" fill="currentColor"></path></svg></a>
+          <a href="https://www.youtube.com/channel/UCZSNzBgFub_WWil6TOTYwAg" target="blank" style="color:white;margin-left:20px;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="YoutubeStandard" aria-hidden="true" class="svg-icon svg-icon-youtube-logo"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.54 6.67C22.288 5.71873 21.549 4.97331 20.6 4.713C18.88 4.25 12 4.25 12 4.25C12 4.25 5.11997 4.25 3.39997 4.713C2.45094 4.97331 1.71199 5.71873 1.45997 6.67C1.14265 8.42869 0.988663 10.213 0.99997 12C0.988663 13.787 1.14265 15.5713 1.45997 17.33C1.71288 18.2825 2.45401 19.0282 3.40497 19.287C5.11997 19.75 12.005 19.75 12.005 19.75C12.005 19.75 18.885 19.75 20.6 19.287C21.549 19.0267 22.288 18.2813 22.54 17.33C22.8573 15.5713 23.0113 13.787 23 12C23.0113 10.213 22.8573 8.42869 22.54 6.67ZM9.74997 15.27V8.729L15.5 12L9.74997 15.27Z" fill="currentColor"></path></svg></a><br><br>
+        </footer>
+        <div style="color:white;opacity:0.7;">
+        <footer id="footer" style="user-select: none;">
+          <a href="#" style="color:white;margin-left:9%;text-decoration: none;">Audio Description</a>
+          <a href="#" style="color:white;margin-left:9%;text-decoration: none;">Help Center</a>
+          <a href="#" style="color:white;margin-left:12%;text-decoration: none;">Gift Cards</a>
+          <a href="#" style="color:white;margin-left:12%;text-decoration: none;">Media Center</a>
+        </footer><br>
+        <footer id="footer" style="user-select: none;">
+          <a href="#" style="color:white;margin-left:9%;text-decoration: none;">Investor Relations</a>
+          <a href="#" style="color:white;margin-left:9.2%;text-decoration: none;">Jobs</a>
+          <a href="#" style="color:white;margin-left:16%;text-decoration: none;">Terms of Use</a>
+          <a href="#" style="color:white;margin-left:10.6%;text-decoration: none;">Privacy</a>
+        </footer><br>
+        <footer id="footer" style="user-select: none;">
+          <a href="#" style="color:white;margin-left:9%;text-decoration: none;">Legal Notices</a>
+          <a href="#" style="color:white;margin-left:11.5%;text-decoration: none;">Cookie Preferences</a>
+          <a href="#" style="color:white;margin-left:8%;text-decoration: none;">Corporate Information</a>
+          <a href="#" style="color:white;margin-left:5.2%;text-decoration: none;">Contact Us</a>
+        </footer><br><br>
+        <button style="padding:5px;background:transparent;color:white;border:white solid 1px;margin-left:9%;user-select: none;">Service Code</button><br><br>
+        <p style="user-select: none;margin-left:9%;">&copy; 1997-2024 Netflix,Inc.</p>
+      </div>
+      </div>
+
+</div>
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico" type="image/png/jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div>
+        <a href="/"><img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="" width="178px" style="padding-top: 14px;margin-left:24px;"></a>
+        <a href="/userlogout/" style="font-size: x-large;color:black;font-weight:700;font-family:Arial, Helvetica, sans-serif;text-decoration: none;margin-left:74%;">Sign Out</a>
+    </div><hr style="opacity:0.3;">
+    <div style="margin-top:120px;font-family:Arial, Helvetica, sans-serif;">
+        <img src="{% static 'images/check logo.png' %}" alt="" type="image/png" style="border:red solid;margin-left:600px"><br>
+        <p style="opacity:0.8;margin-left:600px;">STEP <b>2</b> OF <b>3</b></p>
+        <h1 style="opacity:0.8;margin-left:500px;">Choose your plan.</h1>
+        <h4 style="margin-left:500px;opacity:0.6;"><i class="bi bi-check2">&nbsp;No commitments, cancel anytime.</h4></i>
+        <h4 style="margin-left:500px;opacity:0.6;"><i class="bi bi-check2">&nbsp;Everything on Netflix for one low price.</h4></i>
+        <h4 style="margin-left:500px;opacity:0.6;"><i class="bi bi-check2">&nbsp;No ads and no extra fees. Ever.</h4></i>
+        <a href="/payment_gateway2"><button style="border:red solid; padding: 15px;background-color: red;color:white;width:320px;font-size:larger;border-radius:5px;margin-left:37%;margin-top:30px;opacity:0.9;">Next</button></a><br><br>
+        <div>
+            <footer style="background-color: rgba(221, 219, 219, 0.993); width:100%;height:220px;position: bottom; color:white;padding-top:30px;padding-bottom:10%;">
+              <h4 style="display:inline-block;margin-left:130px;color:grey;">Questions? Call <span style="text-decoration:underline;">000-800-919-1694</span></h4><br>
+              <div style="display: inline-block; margin-left:130px;">
+                <a href="#" style="color:grey;">FAQ</a><br>
+                <a href="#" style="color:grey;">Cookie Pregerences</a><br>
+              </div>
+              <div style="display: inline-block; margin-left:130px;">
+                <a href="#" style="color:grey;">Help Centre</a><br>
+                <a href="#" style="color:grey;">Corporate Informaion</a><br>
+              </div>
+              <div style="display: inline-block; margin-left:130px;">
+                <a href="#" style="color:grey;">Terms of Use</a>
+              </div>
+              <div style="display: inline-block; margin-left:130px;">
+                <a href="#" style="color:grey;">Privacy</a>
+              </div><br><br><br>
+              <h6 style="display:inline-block;color:grey;margin-left:130px;">Netflix India</h6>
+            </footer>
+          </div>
+    </div>
+</body>
+</html>
